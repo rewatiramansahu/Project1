@@ -9,7 +9,7 @@ async function main(){
     await client.connect()
 }
 
-const collection = client.db('augnode').collection('dashboard');
+const collection = client.db('node_aug').collection('dashboard');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT || 7710;
