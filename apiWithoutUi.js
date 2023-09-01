@@ -2,14 +2,14 @@ const express = require('express');
 const app = express();
 const {MongoClient,ObjectId} = require('mongodb');
 //const Mongo = require('mongodb');
-const url ="mongodb://127.0.0.1/27017";
+const url ="mongodb+srv://rewatiramansahu:test1234@cluster0.ybz51jq.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
 async function main(){
     await client.connect()
 }
 
-const collection = client.db('augnode').collection('dashboard');
+const collection = client.db('node_aug').collection('dashboard');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT || 7710;
