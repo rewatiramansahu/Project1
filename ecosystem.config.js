@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'myapp',
+      name: 'my-loopback-app',
       script: 'dist/index.js',
       instances: 8,
       autorestart: true,
