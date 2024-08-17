@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'CRS_DEV',
+      name: 'myapp',
       script: 'dist/index.js',
       instances: 8,
       autorestart: true,
