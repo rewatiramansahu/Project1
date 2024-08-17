@@ -12,7 +12,7 @@
     "node": "18 || 20 || 22"
   },
   "scripts": {
-    "build": "lb-tsc",
+    "build": "NODE_ENV lb-tsc",
     "build:watch": "lb-tsc --watch",
     "lint": "npm run eslint && npm run prettier:check",
     "lint:fix": "npm run eslint:fix && npm run prettier:fix",
