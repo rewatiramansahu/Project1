@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'myapp',
+      name: 'CRS_DEV',
       script: 'dist/index.js',
       instances: 8,
       autorestart: true,
@@ -14,6 +14,7 @@ module.exports = {
         NODE_ENV: 'production',
       },
       log_date_format: 'YYYY-MM-DD HH:mm Z',
+      log_file: '/home/crsapp/orgi-crs/logs/pm2/pm2.log',
     },
   ],
 };

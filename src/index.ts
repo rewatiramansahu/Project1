@@ -18,8 +18,8 @@ if (require.main === module) {
   // Run the application
   const config = {
     rest: {
-      port: +(process.env.PORT ?? 3000),
-      host: process.env.HOST ?? '127.0.0.1',
+      port: +(process.env.PORT ?? 3003),
+      host: process.env.HOST,
       // The `gracePeriodForClose` provides a graceful close for http/https
       // servers with keep-alive clients. The default value is `Infinity`
       // (don't force-close). If you want to immediately destroy all sockets
@@ -30,6 +30,18 @@ if (require.main === module) {
         // useful when used with OpenAPI-to-GraphQL to locate your application
         setServersFromRequest: true,
       },
+      cors: {
+        origin: '*',
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        preflightContinue: false,
+        optionsSuccessStatus: 204,
+        credentials: true,
+      },
+
+      // Enable HTTPS
+      /*protocol: 'https',
+      key: fs.readFileSync('./public/server.key'),
+      cert: fs.readFileSync('./public/server.crt')*/
     },
   };
   main(config).catch(err => {
