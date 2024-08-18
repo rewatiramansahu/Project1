@@ -2,6 +2,14 @@ import {ApplicationConfig, NotesSaveApplication} from './application';
 
 export * from './application';
 
+const express = require('express')
+const app1 = express()
+const port = process.env.PORT??4000;
+
+app1.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
 export async function main(options: ApplicationConfig = {}) {
   const app = new NotesSaveApplication(options);
   await app.boot();
